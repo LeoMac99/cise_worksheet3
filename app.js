@@ -21,10 +21,10 @@ app.get('/', (req, res) => res.send('Hello world!'));
 app.use('/api/books', books);
 
 // if(process.env.NODE_ENV === "production"){
-    app.use(express.static(path.join(__dirname, '/my-app/build')))
+    app.use(express.static(path.join(__dirname, './my-app/build')))
 
     app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'my-app', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, './my-app/build', 'index.html'));
     })
 // }else{
 //     app.get('/', (req, res)=>{
