@@ -7,7 +7,7 @@
     "start": "node app.js",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm install --prefix my-app && npm run build --prefix my-app"
+    "heroku-postbuild": "SET NODE_ENV=production npm install --prefix my-app && npm run build --prefix my-app"
   },
   "repository": {
     "type": "git",
