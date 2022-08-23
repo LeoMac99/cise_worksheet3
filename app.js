@@ -16,7 +16,7 @@ app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.send('Hello world!'));
+app.get('/', (req, res) => res.send('Hello world! ...'));
 
 app.use('/api/books', books);
 app.use(express.static("build"));
